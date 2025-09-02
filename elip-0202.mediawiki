@@ -62,7 +62,7 @@ For each supported issued asset, there is specified fee rate (issued_asset_fee_r
 
 The fee asset and rate can be confirgured with the option:
 
-<code>-setfeeassetrate=<assetID:rate-script></code>: set the </code>assetID:rate-script<code> applied to relay and mempool policy for this node. Optional script to set destination for coinbase fees for each asset. If <code>mandatory_coinbase_destination</code> is set as a consensus rule, then this is not currently possible and will return an error. 
+<code>-setfeeassetrate=<assetID:rate-script></code>: set the <code>assetID:rate-script</code> applied to relay and mempool policy for this node. Optional script to set destination for coinbase fees for each asset. If <code>mandatory_coinbase_destination</code> is set as a consensus rule, then this is not currently possible and will return an error. 
 
 This can be repeated for additional fee assets and rates. The maximum number of fee assets allowed is set by <code>MAX_ISSUED_ASSET_FEE_SIZE</code>. 
 
