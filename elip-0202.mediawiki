@@ -74,6 +74,12 @@ A new accepted fee asset can be added at runtime with the RPC:
 
 Note: In the current Elements, consensus enforces that any individual fee output, or the total sum of fee values in a block do not exceed <code>MAX_MONEY</code>. Issued asset fees could exceed this, as individual assets might have much larger issuances. Therefore, currently in <code>BlockAssember</code> the total value of fee outputs will not exceed <code>MAX_MONEY</code> when generating a new block. However, this may limit transaction capacity and fee revenue on the future. This limitation can be removed along with any hardfork enabling: https://github.com/ElementsProject/elements/pull/1476
 
+Policy will require a single issued asset fee output per transaction to cover the full transaction fee. Child transactions will require the same issued asset for fee payment as the parent transaction, when applying CPFP. 
+
+====RBF policy====
+
+Transaction replacement will be enabled with an issued asset fee output. An additional policy rule will require that the fee asset used in a replacement transaction is the same as in the original transaction (and that the replacement fee amount is higher). An RBF comparison will not account for any change in the fee rates that occured before the replacement. 
+
 ====Fee rate publication====
 
 Asset fee rates (and optional destination) encoded in coinbase <code>OP_RETURN</code> as follows:
