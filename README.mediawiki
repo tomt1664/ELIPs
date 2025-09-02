@@ -75,7 +75,7 @@ Having an ELIP here does not make it a formally accepted standard until its stat
 | Standards Track
 | Active
 |- style="background-color: #ffcfcf"
-| [[elip-0151.mediawiki|202]]
+| [[elip-0202.mediawiki|202]]
 | Applications
 | Issued asset fees
 | Tom Trevethan
